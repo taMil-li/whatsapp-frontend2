@@ -130,3 +130,41 @@ function App() {
 }
 
 export default App;
+
+
+// import React from "react";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+//   Navigate,
+//   useNavigate
+// } from "react-router-dom";
+// import Login from "./pages/Login";
+// import Signup from "./pages/Signup";
+// import Home from "./pages/Home";
+
+// function App() {
+//   const token = localStorage.getItem("token");
+
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route
+//           path="/login"
+//           element={token ? <Navigate to="/" /> : <Login />}
+//         />
+//         <Route
+//           path="/signup"
+//           element={token ? <Navigate to="/" /> : <Signup />}
+//         />
+
+//         <Route path="/" element={token ? <Home /> : <Navigate to="/login" />} />
+
+//         <Route path="*" element={<Navigate to={token ? "/" : "/login"} />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
