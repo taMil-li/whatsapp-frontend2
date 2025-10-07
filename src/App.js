@@ -7,7 +7,7 @@ const CURRENT_USER_ID = parseInt(prompt("UserID: ")); // Represents 'Alice'
 const OTHER_USER_ID = parseInt(prompt("To UserID: ")); // Represents 'Bob'
 const OTHER_USER_NAME = CURRENT_USER_ID === 1 ? "Bob" : "Alice";
 
-const socket = io("https://whatsapp-backend2-1.onrender.com");
+const socket = io("https://whatsapp-backend2-2.onrender.com");
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -21,7 +21,7 @@ function App() {
 
     // Fetch message history
     axios
-      .get(`https://whatsapp-backend2-1.onrender.com/messages/${CURRENT_USER_ID}/${OTHER_USER_ID}`)
+      .get(`https://whatsapp-backend2-2.onrender.com/messages/${CURRENT_USER_ID}/${OTHER_USER_ID}`)
       .then((response) => {
         setMessages(response.data);
       });
